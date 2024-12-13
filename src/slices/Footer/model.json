@@ -10,7 +10,89 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {
+        "links": {
+          "type": "Group",
+          "config": {
+            "label": "Links",
+            "repeat": true,
+            "fields": {
+              "links": {
+                "type": "Link",
+                "config": {
+                  "label": "Links",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        },
+        "cities": {
+          "type": "Group",
+          "config": {
+            "label": "Cities",
+            "repeat": true,
+            "fields": {
+              "cities": {
+                "type": "Link",
+                "config": {
+                  "label": "Cities",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        },
+        "sociallinks": {
+          "type": "Group",
+          "config": {
+            "label": "SocialLinks",
+            "repeat": true,
+            "fields": {
+              "sociallinks": {
+                "type": "Link",
+                "config": {
+                  "label": "SocialLinks",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        },
+        "footerlogo": {
+          "type": "Image",
+          "config": {
+            "label": "Footerlogo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

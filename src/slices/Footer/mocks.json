@@ -2,7 +2,105 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"links": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"links",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "double"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"sociallinks": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"sociallinks",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "likely"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"footerlogo": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "play",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "theory",
+				"type": "Text"
+			},
+			"cities": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cities",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "e869d21d-4bc3-4c3b-a821-eff67b9abde8",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com",
+										"text": "instrument"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
 		"items": []
 	}
 ]

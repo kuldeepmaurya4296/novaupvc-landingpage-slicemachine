@@ -253,6 +253,118 @@ export type ContactUsCitySlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Footer → Default → Primary → Links*
+ */
+export interface FooterSliceDefaultPrimaryLinksItem {
+  /**
+   * Links field in *Footer → Default → Primary → Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.links[].links
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  links: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Cities*
+ */
+export interface FooterSliceDefaultPrimaryCitiesItem {
+  /**
+   * Cities field in *Footer → Default → Primary → Cities*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.cities[].cities
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cities: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → SocialLinks*
+ */
+export interface FooterSliceDefaultPrimarySociallinksItem {
+  /**
+   * SocialLinks field in *Footer → Default → Primary → SocialLinks*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.sociallinks[].sociallinks
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  sociallinks: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Footer → Default → Primary*
+ */
+export interface FooterSliceDefaultPrimary {
+  /**
+   * Links field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.links[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  links: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryLinksItem>>;
+
+  /**
+   * Cities field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.cities[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cities: prismic.GroupField<Simplify<FooterSliceDefaultPrimaryCitiesItem>>;
+
+  /**
+   * SocialLinks field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.sociallinks[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  sociallinks: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimarySociallinksItem>
+  >;
+
+  /**
+   * Footerlogo field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.footerlogo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  footerlogo: prismic.ImageField<never>;
+
+  /**
+   * Email field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phone field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+}
+
+/**
  * Default variation for Footer Slice
  *
  * - **API ID**: `default`
@@ -261,7 +373,7 @@ export type ContactUsCitySlice = prismic.SharedSlice<
  */
 export type FooterSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<FooterSliceDefaultPrimary>,
   never
 >;
 
@@ -847,6 +959,10 @@ declare module "@prismicio/client" {
       ContactUsCitySliceVariation,
       ContactUsCitySliceDefault,
       FooterSlice,
+      FooterSliceDefaultPrimaryLinksItem,
+      FooterSliceDefaultPrimaryCitiesItem,
+      FooterSliceDefaultPrimarySociallinksItem,
+      FooterSliceDefaultPrimary,
       FooterSliceVariation,
       FooterSliceDefault,
       HeroSectionSlice,
