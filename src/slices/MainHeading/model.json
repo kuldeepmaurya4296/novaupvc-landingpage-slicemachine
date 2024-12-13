@@ -1,0 +1,40 @@
+{
+  "id": "main_heading",
+  "type": "SharedSlice",
+  "name": "MainHeading",
+  "description": "MainHeading",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "uPVC Product"
+          }
+        },
+        "subheading": {
+          "type": "Text",
+          "config": {
+            "label": "subheading",
+            "placeholder": "uPVC Product details"
+          }
+        },
+        "paragraph": {
+          "type": "Text",
+          "config": {
+            "label": "paragraph",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "cards",
+  "type": "SharedSlice",
+  "name": "Cards",
+  "description": "Cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "cardsdata": {
+          "type": "Group",
+          "config": {
+            "label": "CardsData",
+            "repeat": true,
+            "fields": {
+              "CardTitle": {
+                "type": "Text",
+                "config": {
+                  "label": "CardTitle",
+                  "placeholder": ""
+                }
+              },
+              "cardcontent": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "CardContent",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

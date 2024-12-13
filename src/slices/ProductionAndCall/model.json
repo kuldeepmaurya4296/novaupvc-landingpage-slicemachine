@@ -1,0 +1,62 @@
+{
+  "id": "production_and_call",
+  "type": "SharedSlice",
+  "name": "ProductionAndCall",
+  "description": "ProductionAndCall",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "logosrc": {
+          "type": "Image",
+          "config": {
+            "label": "logoSrc",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "productionprocesstitle": {
+          "type": "Text",
+          "config": {
+            "label": "ProductionProcessTitle",
+            "placeholder": ""
+          }
+        },
+        "productioncapacitynumber": {
+          "type": "Text",
+          "config": {
+            "label": "productionCapacityNumber",
+            "placeholder": ""
+          }
+        },
+        "productioncapacityunit": {
+          "type": "Text",
+          "config": {
+            "label": "productionCapacityUnit",
+            "placeholder": ""
+          }
+        },
+        "yearsofexperiencenumber": {
+          "type": "Text",
+          "config": {
+            "label": "yearsOfExperienceNumber",
+            "placeholder": ""
+          }
+        },
+        "yearsofexperiencetext": {
+          "type": "Text",
+          "config": {
+            "label": "yearsOfExperienceText",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

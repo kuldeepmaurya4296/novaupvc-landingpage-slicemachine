@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "image": "https://via.placeholder.com/800x400",
+    "heading": "Welcome to Our Website",
+    "description": "This is a description of the hero section. It's reusable and can be updated easily."
+  },
+  "content": [
+    {
+      "image": "https://via.placeholder.com/800x400",
+      "heading": "Section Title 1",
+      "description": "This is a description for the first section. The image takes up 50% of the screen, and the description takes up the other 50%."
+    },
+    {
+      "image": "https://via.placeholder.com/800x400",
+      "heading": "Section Title 2",
+      "description": "This is a description for the second section. You can add more sections by just updating the JSON file."
+    }
+  ],
+  
+    "tableData": [
+      {
+        "heading": "Element 1",
+        "minWidth": "100px",
+        "minHeight": "50px",
+        "maxWidth": "200px",
+        "maxHeight": "150px"
+      },
+      {
+        "heading": "Element 2",
+        "minWidth": "150px",
+        "minHeight": "100px",
+        "maxWidth": "250px",
+        "maxHeight": "200px"
+      },
+      {
+        "heading": "Element 3",
+        "minWidth": "120px",
+        "minHeight": "80px",
+        "maxWidth": "220px",
+        "maxHeight": "170px"
+      }
+    ],
+
+    
+      "heading": "Gallery",
+      "images": [
+        { "src": "https://via.placeholder.com/150", "alt": "Image 1" },
+        { "src": "https://via.placeholder.com/150", "alt": "Image 2" },
+        { "src": "https://via.placeholder.com/150", "alt": "Image 3" }
+      ],
+    
+
+      "cards": [
+        {
+          "image": "https://via.placeholder.com/150",
+          "heading": "Card 1",
+          "description": "This is the description for Card 1."
+        },
+        {
+          "image": "https://via.placeholder.com/150",
+          "heading": "Card 2",
+          "description": "This is the description for Card 2."
+        },
+        {
+          "image": "https://via.placeholder.com/150",
+          "heading": "Card 3",
+          "description": "This is the description for Card 3."
+        }
+      ]
+    
+  
+  
+}

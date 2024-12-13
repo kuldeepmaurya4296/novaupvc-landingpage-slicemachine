@@ -1,0 +1,59 @@
+{
+  "id": "contact_us_city",
+  "type": "SharedSlice",
+  "name": "ContactUsCity",
+  "description": "ContactUsCity",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "locations": {
+          "type": "Group",
+          "config": {
+            "label": "Locations",
+            "repeat": true,
+            "fields": {
+              "city": {
+                "type": "Text",
+                "config": {
+                  "label": "City",
+                  "placeholder": ""
+                }
+              },
+              "state": {
+                "type": "Text",
+                "config": {
+                  "label": "State",
+                  "placeholder": ""
+                }
+              },
+              "address": {
+                "type": "Text",
+                "config": {
+                  "label": "Address",
+                  "placeholder": ""
+                }
+              },
+              "locationlink": {
+                "type": "Link",
+                "config": {
+                  "label": "locationLink",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

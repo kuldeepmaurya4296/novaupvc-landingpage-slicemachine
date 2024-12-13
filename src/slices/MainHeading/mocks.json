@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "earlier",
+				"type": "Text"
+			},
+			"subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "engine",
+				"type": "Text"
+			},
+			"paragraph": {
+				"__TYPE__": "FieldContent",
+				"value": "cannot",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

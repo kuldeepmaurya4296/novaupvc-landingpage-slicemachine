@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"cardsdata": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"CardTitle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pencil",
+									"type": "Text"
+								}
+							],
+							[
+								"cardcontent",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ullamco cupidatat elit adipisicing. Ea amet occaecat reprehenderit exercitation enim ex consequat adipisicing ut voluptate magna. Ullamco amet laboris amet labore ad dolore deserunt sint."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

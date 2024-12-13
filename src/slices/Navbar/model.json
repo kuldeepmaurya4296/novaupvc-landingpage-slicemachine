@@ -1,0 +1,67 @@
+{
+  "id": "navbar",
+  "type": "SharedSlice",
+  "name": "Navbar",
+  "description": "Navbar",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "logosrc": {
+          "type": "Image",
+          "config": {
+            "label": "logoSrc",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "routes": {
+          "type": "Group",
+          "config": {
+            "label": "Routes",
+            "repeat": true,
+            "fields": {
+              "route": {
+                "type": "Link",
+                "config": {
+                  "label": "Route",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        },
+        "videoroute": {
+          "type": "Text",
+          "config": {
+            "label": "videoroute",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "email",
+            "placeholder": ""
+          }
+        },
+        "phonenumber": {
+          "type": "Text",
+          "config": {
+            "label": "phonenumber",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "product_card",
+  "type": "SharedSlice",
+  "name": "ProductCard",
+  "description": "ProductCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "productcard": {
+          "type": "Group",
+          "config": {
+            "label": "ProductCard",
+            "repeat": true,
+            "fields": {
+              "productimage": {
+                "type": "Image",
+                "config": {
+                  "label": "productImage",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "productlink": {
+                "type": "Link",
+                "config": {
+                  "label": "ProductLink",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

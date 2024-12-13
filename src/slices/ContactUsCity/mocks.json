@@ -1,0 +1,54 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"locations": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"city",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "stove",
+									"type": "Text"
+								}
+							],
+							[
+								"state",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "right",
+									"type": "Text"
+								}
+							],
+							[
+								"address",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "harbor",
+									"type": "Text"
+								}
+							],
+							[
+								"locationlink",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "lake"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

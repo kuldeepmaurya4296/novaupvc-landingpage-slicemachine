@@ -1,0 +1,57 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"logosrc": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+					"width": 3199,
+					"height": 3199
+				},
+				"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+				"width": 3199,
+				"height": 3199,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"productioncapacityunit": {
+				"__TYPE__": "FieldContent",
+				"value": "also",
+				"type": "Text"
+			},
+			"yearsofexperiencetext": {
+				"__TYPE__": "FieldContent",
+				"value": "zoo",
+				"type": "Text"
+			},
+			"yearsofexperiencenumber": {
+				"__TYPE__": "FieldContent",
+				"value": "trap",
+				"type": "Text"
+			},
+			"productionprocesstitle": {
+				"__TYPE__": "FieldContent",
+				"value": "street",
+				"type": "Text"
+			},
+			"productioncapacitynumber": {
+				"__TYPE__": "FieldContent",
+				"value": "bow",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
