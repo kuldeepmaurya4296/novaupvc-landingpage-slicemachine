@@ -54,7 +54,7 @@ const Navigation = ({
         }
     }, []);
 
-    const isActive = (route) => pathname === route ? 'text-[#c69240]' : 'text-white'; // Highlight active route
+    const isActive = (route) => (pathname === route ? 'text-[#c69240]' : 'text-white'); // Highlight active route
 
     return (
         <nav className="overflow-x-hidden">
@@ -82,13 +82,13 @@ const Navigation = ({
                 className={`fixed w-full z-50 bg-gray-800 uppercase ${isMobile ? 'py-3' : ''}`}
                 initial={{ y: 0 }}
                 animate={{
-                    y: scrollDirection === 'down' ? '-200%' :window.scrollY === 0?'0': '-110%',
+                    y: scrollDirection === 'down' ? '-200%' : lastScrollY === 0 ? '0' : '-110%',
                     transition: { duration: 0.4 },
                 }}
             >
                 <div className="w-full flex items-center justify-between px-4 lg:px-8 lg:py-4 max-w-full">
                     {/* Logo */}
-                    <div className="text-white font-bold text-lg w-[20%]">
+                    <div className={`text-white font-bold text-lg w-[20%] ${lastScrollY === 0 ? 'block lg:hidden' : 'block'}`}>
                         <Link href="/">
                             <Image
                                 src={logoSrc}

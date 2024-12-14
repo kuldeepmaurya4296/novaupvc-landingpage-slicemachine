@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-hover {
+    transition: all 300ms ease-in-out; /* Equivalent to duration-300 and ease-in-out */
+  }
+  
+  .text-hover:hover {
+    color: #c69240; /* Equivalent to hover:text-blue-400 */
+    letter-spacing: 0.05em; /* Equivalent to hover:tracking-widest */
+  }

@@ -14,7 +14,7 @@ const HeroSection = ({ slice }) => {
       className="hero-section relative mt-16"
     >
      <PrismicNextImage field={slice.primary.heroimage} />
-     <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold  bg-gray-50 bg-opacity-50 w-full text-center ">{slice.primary.heading}</h1>
+     <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-6xl lg:text-4xl md:text-2xl font-bold  bg-gray-50 bg-opacity-50 w-full text-center ">{slice.primary.heading}</h1>
     </section>
   );
 };

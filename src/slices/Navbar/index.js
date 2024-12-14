@@ -6,7 +6,7 @@
   import Navigation from "@/components/Header/Navbar";
 
   const Navbar = ({ slice }) => {
-    console.log('navbar slice data - ', slice.primary)
+    // console.log('navbar slice data - ', slice.primary)
     return (
       <section
         data-slice-type={slice.slice_type}

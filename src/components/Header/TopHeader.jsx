@@ -13,14 +13,14 @@ export default function TopHeader({
     <header className="w-full px-4 py-0 shadow-sm">
       <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-40">
         {/* Logo */}
-        <div className="text-white font-bold text-lg w-[20%]">
+        <div className="font-bold text-lg w-[20%] py-1">
           <Link href="/">
             <Image
               src={logo}
               width={100}
               height={100}
               alt="Logo"
-              className="bg-white w-10 sm:w-20 rounded-lg"
+              className="bg-gray-50 w-10 sm:w-16 rounded-lg"
             />
           </Link>
         </div>

@@ -25,7 +25,7 @@ export const Licence = ({
                         {logos.map((logo, index) => (
                             <div key={index} className="inline-block py-4 mx-4 border rounded-full w-20 h-20 relative">
                                 <Image width={200} height={200}
-                                    src={logo}
+                                    src={logo?.logo?.url}
                                     alt={`Company ${index + 1}`}
                                     className="w-16 h-16 object-contain rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                                 />

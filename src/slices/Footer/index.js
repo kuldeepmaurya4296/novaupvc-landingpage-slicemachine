@@ -21,6 +21,7 @@ const customSocialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/mycompany' }
 ];
 const Footer = ({ slice }) => {
+  // console.log('footer data-------',slice.primary.cities)
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -28,12 +29,12 @@ const Footer = ({ slice }) => {
     >
      
      <PageFooter 
-        citiesData={customCities}
-        linksData={customLinks}
-        socialLinks={customSocialLinks}
-        logoSrc="/path/to/custom-logo.png"
-        contactEmail="customemail@example.com"
-        contactPhone="+91 1234567890"
+        citiesData={slice.primary.cities}
+        linksData={slice.primary.links}
+        socialLinks={slice.primary.sociallinks}
+        logoSrc={slice.primary.footerlogo?.url}
+        contactEmail={slice.primary.email}
+        contactPhone= {slice.primary.phone}
       />
     </section>
   );

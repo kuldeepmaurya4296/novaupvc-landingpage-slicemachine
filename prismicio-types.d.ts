@@ -4,92 +4,137 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice =
-  | FooterSlice
-  | ScheduleCallSlice
-  | LeadingCompniesSlice
-  | ContactUsCitySlice
-  | ProductionAndCallSlice
-  | ProductCardSlice
-  | CardsSlice
-  | VideoSlice
-  | MainHeadingSlice
-  | HeroSectionSlice
-  | NavbarSlice;
-
-type PageDocumentDataSlices1Slice = never;
+type AboutUsDocumentDataSlicesSlice = HeroSectionSlice | NavbarSlice;
 
 /**
- * Content for HomePage documents
+ * Content for About Us documents
  */
-interface PageDocumentData {
+interface AboutUsDocumentData {
   /**
-   * Slice Zone field in *HomePage*
+   * Slice Zone field in *About Us*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.slices[]
+   * - **API ID Path**: about_us.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
-   * Meta Title field in *HomePage*
+  slices: prismic.SliceZone<AboutUsDocumentDataSlicesSlice> /**
+   * Meta Title field in *About Us*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: page.meta_title
+   * - **API ID Path**: about_us.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *HomePage*
+   * Meta Description field in *About Us*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: page.meta_description
+   * - **API ID Path**: about_us.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *HomePage*
+   * Meta Image field in *About Us*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.meta_image
+   * - **API ID Path**: about_us.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>;
-
-  /**
-   * Slice Zone field in *HomePage*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.slices1[]
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices1: prismic.SliceZone<PageDocumentDataSlices1Slice>;
 }
 
 /**
- * HomePage document from Prismic
+ * About Us document from Prismic
  *
- * - **API ID**: `page`
+ * - **API ID**: `about_us`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutUsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<AboutUsDocumentData>,
+    "about_us",
+    Lang
+  >;
+
+type AboutusDocumentDataSlicesSlice = never;
+
+/**
+ * Content for AboutUs documents
+ */
+interface AboutusDocumentData {
+  /**
+   * Slice Zone field in *AboutUs*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: aboutus.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<AboutusDocumentDataSlicesSlice> /**
+   * Meta Title field in *AboutUs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: aboutus.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *AboutUs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: aboutus.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *AboutUs*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: aboutus.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * AboutUs document from Prismic
+ *
+ * - **API ID**: `aboutus`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type PageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+export type AboutusDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<AboutusDocumentData>,
+    "aboutus",
+    Lang
+  >;
 
-export type AllDocumentTypes = PageDocument;
+export type AllDocumentTypes = AboutUsDocument | AboutusDocument;
 
 /**
  * Item in *Cards → Default → Primary → CardsData*
@@ -447,6 +492,48 @@ export type HeroSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *LeadingCompnies → Default → Primary → compnies*
+ */
+export interface LeadingCompniesSliceDefaultPrimaryCompniesItem {
+  /**
+   * logo field in *LeadingCompnies → Default → Primary → compnies*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: leading_compnies.default.primary.compnies[].logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Name field in *LeadingCompnies → Default → Primary → compnies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: leading_compnies.default.primary.compnies[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *LeadingCompnies → Default → Primary*
+ */
+export interface LeadingCompniesSliceDefaultPrimary {
+  /**
+   * compnies field in *LeadingCompnies → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: leading_compnies.default.primary.compnies[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  compnies: prismic.GroupField<
+    Simplify<LeadingCompniesSliceDefaultPrimaryCompniesItem>
+  >;
+}
+
+/**
  * Default variation for LeadingCompnies Slice
  *
  * - **API ID**: `default`
@@ -455,7 +542,7 @@ export type HeroSectionSlice = prismic.SharedSlice<
  */
 export type LeadingCompniesSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<LeadingCompniesSliceDefaultPrimary>,
   never
 >;
 
@@ -943,10 +1030,12 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      PageDocument,
-      PageDocumentData,
-      PageDocumentDataSlicesSlice,
-      PageDocumentDataSlices1Slice,
+      AboutUsDocument,
+      AboutUsDocumentData,
+      AboutUsDocumentDataSlicesSlice,
+      AboutusDocument,
+      AboutusDocumentData,
+      AboutusDocumentDataSlicesSlice,
       AllDocumentTypes,
       CardsSlice,
       CardsSliceDefaultPrimaryCardsdataItem,
@@ -970,6 +1059,8 @@ declare module "@prismicio/client" {
       HeroSectionSliceVariation,
       HeroSectionSliceDefault,
       LeadingCompniesSlice,
+      LeadingCompniesSliceDefaultPrimaryCompniesItem,
+      LeadingCompniesSliceDefaultPrimary,
       LeadingCompniesSliceVariation,
       LeadingCompniesSliceDefault,
       MainHeadingSlice,

@@ -11,6 +11,7 @@ const ContactUsCity = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      // className="md:px-1 lg:px-20 xl:px-40"
     >
       <ContactUs citiesData={slice.primary.locations}/>
     </section>

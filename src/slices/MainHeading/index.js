@@ -10,8 +10,9 @@ const MainHeading = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="px-4 md:px-10 lg:px-20 xl:px-40"
     >
-    <NovaHeader heading={slice.primary.heading} subheading={slice.primary.subheading} paragraph={slice.primary.paragraph} className={`text-start`} />
+    <NovaHeader heading={slice.primary.heading} subheading={slice.primary.subheading} paragraph={slice.primary.paragraph} className={``} />
     </section>
   );
 };
