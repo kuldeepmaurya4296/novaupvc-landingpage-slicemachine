@@ -91,7 +91,7 @@ const Navigation = ({
                     <div className={`text-white font-bold text-lg w-[20%] ${lastScrollY === 0 ? 'block lg:hidden' : 'block'}`}>
                         <Link href="/">
                             <Image
-                                src={logoSrc}
+                                src={logoSrc || "/uPVCnova.png"}
                                 width={logoWidth}
                                 height={logoHeight}
                                 alt={logoAlt}

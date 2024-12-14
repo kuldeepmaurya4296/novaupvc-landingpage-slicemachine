@@ -6,7 +6,7 @@ import { Licence } from "@/components/Pages/Homepage/WhyUS/licence";
  * @param {LeadingCompniesProps}
  */
 const LeadingCompnies = ({ slice }) => {
-  console.log('slice----',slice.primary.compnies[0].logo)
+  // console.log('slice----',slice.primary.compnies[0].logo)
   return (
     <section
       data-slice-type={slice.slice_type}

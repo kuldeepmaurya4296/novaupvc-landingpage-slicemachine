@@ -15,8 +15,11 @@ export const Production = ({
   return (
     <div className="flex flex-col items-center justify-center py-8 md:py-12 bg-gray-50">
       {/* Logo inside a circle */}
-      <div className="md:w-28 md:h-28 w-16 h-16 border border-[#c69240] rounded-full flex items-center justify-center mb-6">
-        <Image width={100} height={100} src={logoSrc} alt='upvc nova logo' className='md:w-20 md:h-20 w-12 h-12' />
+      <div className="flex items-center justify-center mb-6">
+        <div className="w-16 h-16 border border-[#c69240] rounded-full flex items-center justify-center text-white text-4xl">
+          {/* <Phone className="text-[#c69240]" /> */}
+          <Image src={logoSrc} alt="logo" className="w-12 h-12" width={50} height={50}/>
+        </div>
       </div>
 
       {/* Heading */}
@@ -28,7 +31,7 @@ export const Production = ({
       <div className="flex items-center justify-center gap-10  md:py-8">
         {/* Annual Capacity */}
         <div className="text-center w-[50%] md:pr-20">
-          <p className="text-[40px] md:text-[100px] font-thin text-[#c6934080]">{productionCapacity}</p>
+          <p className="text-[40px] md:text-[60px] font-thin text-[#c69340]">{productionCapacity}</p>
           <p className="text-xs md:text-2xl text-[#c69240] uppercase">{productionCapacityUnit}</p>
         </div>
 
@@ -37,7 +40,7 @@ export const Production = ({
 
         {/* Years of Experience */}
         <div className="text-center w-[50%] md:pl-20">
-          <p className="text-[40px] md:text-[100px] font-thin text-[#c6934080]">{yearsOfExperience}</p>
+          <p className="text-[40px] md:text-[60px] font-thin text-[#c69340]">{yearsOfExperience}</p>
           <p className="text-xs md:text-2xl text-[#c69240] uppercase">{yearsOfExperienceText}</p>
         </div>
       </div>

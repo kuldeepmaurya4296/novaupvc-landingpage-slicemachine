@@ -1,7 +1,7 @@
 {
   "format": "custom",
-  "id": "aboutus",
-  "label": "AboutUS",
+  "id": "whyus",
+  "label": "WhyUs",
   "repeatable": false,
   "status": true,
   "json": {
@@ -11,19 +11,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "vision_data": {
-              "type": "SharedSlice"
-            },
-            "about_team": {
-              "type": "SharedSlice"
-            },
-            "image": {
-              "type": "SharedSlice"
-            },
-            "main_heading": {
+            "video": {
               "type": "SharedSlice"
             },
             "navbar": {
+              "type": "SharedSlice"
+            },
+            "main_heading": {
               "type": "SharedSlice"
             },
             "hero_section": {

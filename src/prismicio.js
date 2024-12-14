@@ -15,14 +15,31 @@ export const repositoryName =
  */
 const routes = [
   {
-    type: "page",
+    type: "homepage",
     path: "/:uid",
   },
   {
-    type: "page",
+    type: "homepage",
     uid: "home",
     path: "/",
   },
+  {
+    type: 'aboutus',
+    path: '/about-us/:uid',
+  },
+  {
+    type: "contactus", // Contact Us singleton
+    path: "/contact-us",
+  },
+  {
+    type: "whyus", // Contact Us singleton
+    path: "/why-us",
+  },
+  {
+    type: "windows", // Contact Us singleton
+    path: "/windows",
+  },
+  
 ];
 
 /**

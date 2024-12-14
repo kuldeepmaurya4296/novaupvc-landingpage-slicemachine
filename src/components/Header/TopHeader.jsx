@@ -16,7 +16,7 @@ export default function TopHeader({
         <div className="font-bold text-lg w-[20%] py-1">
           <Link href="/">
             <Image
-              src={logo}
+              src={logo || "/uPVCnova.png"}
               width={100}
               height={100}
               alt="Logo"

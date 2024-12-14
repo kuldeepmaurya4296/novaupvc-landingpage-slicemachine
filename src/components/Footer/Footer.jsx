@@ -4,24 +4,13 @@ import Image from 'next/image';
 
 // Reusable Footer component
 const PageFooter = ({ citiesData, linksData, socialLinks, logoSrc, contactEmail, contactPhone }) => {
-  // console.log(`'citiesData--------',${citiesData},\n linksData-----------${linksData}, \nsocialLinks-------------------${socialLinks}, \nlogoSrc,----------${logoSrc} \ncontactEmail-------${contactEmail},\n contactPhone----------${contactPhone} `)
   return (
     <footer className="bg-gray-800 text-white pt-5 md:pt-8 relative ">
-      {/* <Link href="/" className="w-full md:hidden">
-        <Image
-          src={logoSrc || "/uPVCnova.png"} 
-          width={100}
-          height={100}
-          alt="nova logo"
-          className="bg-white p-1 w-12 self-center rounded-lg m-auto mb-6"
-        />
-      </Link> */}
-  
-      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-3 lg:grid-cols-4 place-items-center gap-8">
-        {/* First Column: Navigation Links */}
+      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-3 lg:grid-cols-4 gap-8">
+        {/* First Column: Logo and Contact Details */}
         <div className='col-span-3 lg:col-span-1 lg:order-1'>
           <div className="flex items-center flex-row lg:flex-col gap-6 text-white justify-center">
-            <Link href="/" className=" md:block">
+            <Link href="/" className="md:block">
               <Image
                 src={logoSrc || "/uPVCnova.png"} // Default logo if none is provided
                 width={100}
@@ -30,63 +19,59 @@ const PageFooter = ({ citiesData, linksData, socialLinks, logoSrc, contactEmail,
                 className="bg-white p-1 lg:w-16 w-12 rounded-lg"
               />
             </Link>
-
-            {/* Contact Details */}
-            <p className="">
+            <p>
               <span className="font-medium">Email: </span>
               <a href={`mailto:${contactEmail}`} className="hover:text-[#c69240]">
                 {contactEmail}
               </a>
             </p>
-            <p className="">
+            <p>
               Phone: <Link href={`tel:${contactPhone}`} className="hover:text-[#c69240]">{contactPhone}</Link>
             </p>
           </div>
         </div>
 
+        {/* Links Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">Links</h3>
+          <h3 className="text-xl font-semibold mb-2">Links</h3>
           <ul className="space-y-1 uppercase">
             {linksData.map((link, index) => (
               <li key={link.key}>
-                <Link href={link?.links?.text} className="text-hover text-xs md:text-sm ">
-                  {link?.links?.text}
+                <Link href={link?.links?.text || "#"} className="text-hover text-xs md:text-[16px]">
+                  {link?.links?.text || "No Link"}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Second Column: Cities */}
+        {/* Cities Section */}
         <div>
           <h3 className="text-xl font-semibold mb-2">Contact</h3>
           <ul className="space-y-1">
             {citiesData.map((city) => (
               <li key={city.key} className="text-gray-400 hover:tracking-widest hover:text-gray-50 transition-all duration-300 ease-in-out text-sm md:text-sm lg:text-lg">
-                <Link href={city?.cities?.url} target="_blank" rel="noopener noreferrer">
-                  {city?.cities?.text}
+                <Link href={city?.cities?.url || "#"} target="_blank" rel="noopener noreferrer">
+                  {city?.cities?.text || "No City"}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Third Column: Social Networks */}
+        {/* Social Networks Section */}
         <div>
           <h3 className="font-semibold mb-2 text-lg">Social Networks</h3>
           <ul className="space-y-1">
             {socialLinks.map((social, index) => (
               <li key={index}>
-                <Link href={social?.sociallinks?.url} className="text-hover text-xs md:text-sm lg:text-lg" target="_blank" rel="noopener noreferrer">
-                  {social?.sociallinks?.text}
+                <Link href={social?.sociallinks?.url || "#"} className="text-hover text-xs md:text-sm lg:text-lg" target="_blank" rel="noopener noreferrer">
+                  {social?.sociallinks?.text || "No Social Link"}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-
-        {/* Fourth Column: Contact Details */}
-      
       </div>
 
       {/* Footer Bottom Section */}
@@ -100,6 +85,5 @@ const PageFooter = ({ citiesData, linksData, socialLinks, logoSrc, contactEmail,
     </footer>
   );
 };
-
 
 export default PageFooter;

@@ -21,15 +21,12 @@ const data = [
         description:
             "We aim to create innovative solutions that change the world. Our goal is to lead the industry with sustainable technology.",
     },
-    // {
-    //     image: "/innovation.jpg",
-    //     heading: "Innovation",
-    //     description:
-    //         "Innovation drives us forward, and we believe in pushing boundaries to create groundbreaking solutions.",
-    // },
+    
 ];
 
-export const Vision = () => {
+export const Vision = ({data}) => {
+    console.log('vision Data --- ', data)
+   
     const [selectedIndex, setSelectedIndex] = useState(0); // Track the selected card
 
     const handleCardClick = (index) => {
@@ -45,8 +42,8 @@ export const Vision = () => {
                 <div className="w-full  flex justify-center items-center  py-2 lg:w-[35%]">
                     <div className="w-[400px] h-[300px] relative overflow-hidden rounded-lg shadow-md">
                         <Image
-                            src={data[selectedIndex].image}
-                            alt={data[selectedIndex].heading}
+                            src={data[selectedIndex].image?.url}
+                            alt={data[selectedIndex].title}
                             fill
                             className="object-cover transition-all duration-300"
                         />
@@ -64,7 +61,7 @@ export const Vision = () => {
                                 className={`relative flex-shrink-0 w-1/2 lg:w-[30%] min-h-[250px] p-4 cursor-pointer bg-white shadow-md rounded-lg transition-all duration-300 ${selectedIndex === index ? "border-2 border-[#c69240]" : ""
                                     }`}
                             >
-                                <h3 className="text-xl font-bold text-[#c69240]">{item.heading}</h3>
+                                <h3 className="text-xl font-bold text-[#c69240]">{item.title}</h3>
                                 <p className="text-gray-600 mt-2 text-sm">{item.description}</p>
 
                                 {/* Dot Below Each Card */}

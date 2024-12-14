@@ -3,10 +3,12 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_team: dynamic(() => import("./AboutTeam")),
   cards: dynamic(() => import("./Cards")),
   contact_us_city: dynamic(() => import("./ContactUsCity")),
   footer: dynamic(() => import("./Footer")),
   hero_section: dynamic(() => import("./HeroSection")),
+  image: dynamic(() => import("./Image")),
   leading_compnies: dynamic(() => import("./LeadingCompnies")),
   main_heading: dynamic(() => import("./MainHeading")),
   navbar: dynamic(() => import("./Navbar")),
@@ -14,4 +16,5 @@ export const components = {
   production_and_call: dynamic(() => import("./ProductionAndCall")),
   schedule_call: dynamic(() => import("./ScheduleCall")),
   video: dynamic(() => import("./Video")),
+  vision_data: dynamic(() => import("./VisionData")),
 };
