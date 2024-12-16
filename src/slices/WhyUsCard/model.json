@@ -1,0 +1,50 @@
+{
+  "id": "why_us_card",
+  "type": "SharedSlice",
+  "name": "WhyUsCard",
+  "description": "WhyUsCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "card": {
+          "type": "Group",
+          "config": {
+            "label": "Card",
+            "repeat": true,
+            "fields": {
+              "cardlogo": {
+                "type": "Image",
+                "config": {
+                  "label": "CardLogo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "cardtitle": {
+                "type": "Text",
+                "config": {
+                  "label": "CardTitle",
+                  "placeholder": ""
+                }
+              },
+              "cardcontent": {
+                "type": "Text",
+                "config": {
+                  "label": "CardContent",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

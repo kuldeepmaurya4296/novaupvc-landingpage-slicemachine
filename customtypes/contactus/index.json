@@ -11,6 +11,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contact_us_city": {
+              "type": "SharedSlice"
+            },
+            "contact_us_data": {
+              "type": "SharedSlice"
+            },
             "navbar": {
               "type": "SharedSlice"
             },

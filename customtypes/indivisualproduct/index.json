@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "doors",
-  "label": "Doors",
+  "id": "indivisualproduct",
+  "label": "IndivisualProduct",
   "repeatable": true,
   "status": true,
   "json": {
@@ -20,28 +20,13 @@
             "image": {
               "type": "SharedSlice"
             },
-            "leading_compnies": {
-              "type": "SharedSlice"
-            },
-            "products": {
-              "type": "SharedSlice"
-            },
-            "verity": {
-              "type": "SharedSlice"
-            },
-            "why_us_pointers_with_video": {
-              "type": "SharedSlice"
-            },
-            "window_cards": {
-              "type": "SharedSlice"
-            },
-            "navbar": {
-              "type": "SharedSlice"
-            },
             "video": {
               "type": "SharedSlice"
             },
             "main_heading": {
+              "type": "SharedSlice"
+            },
+            "navbar": {
               "type": "SharedSlice"
             },
             "hero_section": {

@@ -11,6 +11,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "why_us_pointers_with_video": {
+              "type": "SharedSlice"
+            },
+            "why_us_card": {
+              "type": "SharedSlice"
+            },
             "video": {
               "type": "SharedSlice"
             },

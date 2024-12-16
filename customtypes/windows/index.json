@@ -17,6 +17,24 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "leading_compnies": {
+              "type": "SharedSlice"
+            },
+            "verity": {
+              "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
+            },
+            "products": {
+              "type": "SharedSlice"
+            },
+            "window_cards": {
+              "type": "SharedSlice"
+            },
+            "why_us_pointers_with_video": {
+              "type": "SharedSlice"
+            },
             "video": {
               "type": "SharedSlice"
             },

@@ -4,8 +4,10 @@ import dynamic from "next/dynamic";
 
 export const components = {
   about_team: dynamic(() => import("./AboutTeam")),
+  brochure: dynamic(() => import("./Brochure")),
   cards: dynamic(() => import("./Cards")),
   contact_us_city: dynamic(() => import("./ContactUsCity")),
+  contact_us_data: dynamic(() => import("./ContactUsPage")),
   footer: dynamic(() => import("./Footer")),
   hero_section: dynamic(() => import("./HeroSection")),
   image: dynamic(() => import("./Image")),
@@ -14,7 +16,14 @@ export const components = {
   navbar: dynamic(() => import("./Navbar")),
   product_card: dynamic(() => import("./ProductCard")),
   production_and_call: dynamic(() => import("./ProductionAndCall")),
+  products: dynamic(() => import("./Products")),
   schedule_call: dynamic(() => import("./ScheduleCall")),
+  verity: dynamic(() => import("./Veriety")),
   video: dynamic(() => import("./Video")),
   vision_data: dynamic(() => import("./VisionData")),
+  why_us_card: dynamic(() => import("./WhyUsCard")),
+  why_us_pointers_with_video: dynamic(
+    () => import("./ProductPointersWithVideo"),
+  ),
+  window_cards: dynamic(() => import("./WindowCards")),
 };
