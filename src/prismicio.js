@@ -36,11 +36,15 @@ const routes = [
     path: "/why-us",
   },
   {
-    type: "windows", // Contact Us singleton
-    path: "/windows",
+    type: "windows", // Windows repeatable type
+    path: "/windows/:uid", // Dynamic path for each window item
+  },
+  {
+    type: "doors", // Doors repeatable type
+    path: "/doors/:uid", // Dynamic path for each door item
   },
   
-];
+]
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to

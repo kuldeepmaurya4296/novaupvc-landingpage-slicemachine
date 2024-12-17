@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 
 export const components = {
   about_team: dynamic(() => import("./AboutTeam")),
+  advantages_data_for_indivisual_product: dynamic(
+    () => import("./AdvantagesDataForIndivisualProduct"),
+  ),
   brochure: dynamic(() => import("./Brochure")),
   cards: dynamic(() => import("./Cards")),
   contact_us_city: dynamic(() => import("./ContactUsCity")),
@@ -11,6 +14,10 @@ export const components = {
   footer: dynamic(() => import("./Footer")),
   hero_section: dynamic(() => import("./HeroSection")),
   image: dynamic(() => import("./Image")),
+  image_gallery: dynamic(() => import("./ImageGallery")),
+  indivisual_product_image_desc: dynamic(
+    () => import("./IndivisualProductImageDesc"),
+  ),
   leading_compnies: dynamic(() => import("./LeadingCompnies")),
   main_heading: dynamic(() => import("./MainHeading")),
   navbar: dynamic(() => import("./Navbar")),
@@ -18,6 +25,7 @@ export const components = {
   production_and_call: dynamic(() => import("./ProductionAndCall")),
   products: dynamic(() => import("./Products")),
   schedule_call: dynamic(() => import("./ScheduleCall")),
+  table_data: dynamic(() => import("./TableData")),
   verity: dynamic(() => import("./Veriety")),
   video: dynamic(() => import("./Video")),
   vision_data: dynamic(() => import("./VisionData")),

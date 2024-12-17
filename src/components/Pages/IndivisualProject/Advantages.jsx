@@ -14,8 +14,8 @@ export const Advantages = ({ title, imageSrc, imageAlt, imageWidth, imageHeight,
                 <div className='w-full md:w-1/2 flex justify-center md:justify-end'>
                 <Image
                     src={imageSrc}
-                    width={imageWidth}
-                    height={imageHeight}
+                    width={imageWidth || 300}
+                    height={imageHeight || 400}
                     alt={imageAlt}
                     className="rounded shadow-lg"
                 />
@@ -23,11 +23,11 @@ export const Advantages = ({ title, imageSrc, imageAlt, imageWidth, imageHeight,
 
                 {/* List */}
                 <div className="text-gray-700 w-full md:w-1/2">
-                    <h2 className="text-xl font-bold mb-4">{title}</h2>
+                    <h2 className="text-xl font-bold mb-4">{title || 'Advantages'}</h2>
 
                     <ul className="list-disc list-inside">
                         {items.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index}>{item.text}</li>
                         ))}
                     </ul>
                 </div>

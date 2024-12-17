@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 /**
@@ -20,13 +21,13 @@ const Brochure = ({ slice }) => {
       {/* Brochure Header */}
       <div className="text-center mb-8">
         
-        <a
+        <Link
           href={brochureLink}
           download
           className="mt-4 inline-block bg-[#bc8a3d] text-white py-2 px-6 rounded-md hover:bg-[#a87220] transition"
         >
           Download Brochure
-        </a>
+        </Link>
       </div>
 
       {/* Brochure Content */}

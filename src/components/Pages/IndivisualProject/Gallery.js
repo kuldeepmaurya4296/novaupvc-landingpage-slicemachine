@@ -34,13 +34,13 @@ const GalleryComponent = ({data}) => {
 
       {/* Image Gallery */}
       <div className="flex flex-wrap justify-center gap-4 border p-6 ">
-        {data.images.map((image, index) => (
-          <div key={index} className="cursor-pointer max-w-xs" onClick={() => handleImageClick(image.src)}>
+        {data.map((image, index) => (
+          <div key={index} className="cursor-pointer max-w-xs" onClick={() => handleImageClick(image.image?.url)}>
             <Image
               width={200}
               height={100}
-              src={image.src}
-              alt={image.alt}
+              src={image.image?.url}
+              alt={image.image?.alt}
               className="w-full h-auto object-cover rounded-lg"
             />
           </div>

@@ -21,9 +21,9 @@ const PageFooter = ({ citiesData, linksData, socialLinks, logoSrc, contactEmail,
             </Link>
             <p>
               <span className="font-medium">Email: </span>
-              <a href={`mailto:${contactEmail}`} className="hover:text-[#c69240]">
+              <Link href={`mailto:${contactEmail}`} className="hover:text-[#c69240]">
                 {contactEmail}
-              </a>
+              </Link>
             </p>
             <p>
               Phone: <Link href={`tel:${contactPhone}`} className="hover:text-[#c69240]">{contactPhone}</Link>

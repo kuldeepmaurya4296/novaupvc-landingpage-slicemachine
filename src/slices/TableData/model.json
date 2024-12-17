@@ -1,0 +1,63 @@
+{
+  "id": "table_data",
+  "type": "SharedSlice",
+  "name": "TableData",
+  "description": "TableData",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tabledata": {
+          "type": "Group",
+          "config": {
+            "label": "TableData",
+            "repeat": true,
+            "fields": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": ""
+                }
+              },
+              "minwidth": {
+                "type": "Text",
+                "config": {
+                  "label": "minWidth",
+                  "placeholder": ""
+                }
+              },
+              "minheight": {
+                "type": "Text",
+                "config": {
+                  "label": "minHeight",
+                  "placeholder": ""
+                }
+              },
+              "maxwidth": {
+                "type": "Text",
+                "config": {
+                  "label": "maxWidth",
+                  "placeholder": ""
+                }
+              },
+              "maxheight": {
+                "type": "Text",
+                "config": {
+                  "label": "maxHeight",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

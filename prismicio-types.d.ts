@@ -336,6 +336,10 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type IndivisualproductDocumentDataSlicesSlice =
+  | TableDataSlice
+  | IndivisualProductImageDescSlice
+  | ImageGallerySlice
+  | AdvantagesDataForIndivisualProductSlice
   | ImageSlice
   | VideoSlice
   | MainHeadingSlice
@@ -668,6 +672,73 @@ type AboutTeamSliceVariation = AboutTeamSliceDefault;
 export type AboutTeamSlice = prismic.SharedSlice<
   "about_team",
   AboutTeamSliceVariation
+>;
+
+/**
+ * Primary content in *AdvantagesDataForIndivisualProduct → Default → Primary*
+ */
+export interface AdvantagesDataForIndivisualProductSliceDefaultPrimary {
+  /**
+   * Title field in *AdvantagesDataForIndivisualProduct → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advantages_data_for_indivisual_product.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Image field in *AdvantagesDataForIndivisualProduct → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advantages_data_for_indivisual_product.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Items field in *AdvantagesDataForIndivisualProduct → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advantages_data_for_indivisual_product.default.primary.items
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  items: prismic.RichTextField;
+}
+
+/**
+ * Default variation for AdvantagesDataForIndivisualProduct Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AdvantagesDataForIndivisualProductSliceDefault =
+  prismic.SharedSliceVariation<
+    "default",
+    Simplify<AdvantagesDataForIndivisualProductSliceDefaultPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *AdvantagesDataForIndivisualProduct*
+ */
+type AdvantagesDataForIndivisualProductSliceVariation =
+  AdvantagesDataForIndivisualProductSliceDefault;
+
+/**
+ * AdvantagesDataForIndivisualProduct Shared Slice
+ *
+ * - **API ID**: `advantages_data_for_indivisual_product`
+ * - **Description**: AdvantagesDataForIndivisualProduct
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AdvantagesDataForIndivisualProductSlice = prismic.SharedSlice<
+  "advantages_data_for_indivisual_product",
+  AdvantagesDataForIndivisualProductSliceVariation
 >;
 
 /**
@@ -1230,6 +1301,162 @@ type ImageSliceVariation = ImageSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
+ * Item in *ImageGallery → Default → Primary → Images*
+ */
+export interface ImageGallerySliceDefaultPrimaryImagesItem {
+  /**
+   * Image field in *ImageGallery → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_gallery.default.primary.images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *ImageGallery → Default → Primary → Images*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_gallery.default.primary.images[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ImageGallery → Default → Primary*
+ */
+export interface ImageGallerySliceDefaultPrimary {
+  /**
+   * Images field in *ImageGallery → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_gallery.default.primary.images[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  images: prismic.GroupField<
+    Simplify<ImageGallerySliceDefaultPrimaryImagesItem>
+  >;
+}
+
+/**
+ * Default variation for ImageGallery Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageGallerySliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImageGallery*
+ */
+type ImageGallerySliceVariation = ImageGallerySliceDefault;
+
+/**
+ * ImageGallery Shared Slice
+ *
+ * - **API ID**: `image_gallery`
+ * - **Description**: ImageGallery
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySlice = prismic.SharedSlice<
+  "image_gallery",
+  ImageGallerySliceVariation
+>;
+
+/**
+ * Item in *IndivisualProductImageDesc → Default → Primary → Data*
+ */
+export interface IndivisualProductImageDescSliceDefaultPrimaryDataItem {
+  /**
+   * Image field in *IndivisualProductImageDesc → Default → Primary → Data*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: indivisual_product_image_desc.default.primary.data[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *IndivisualProductImageDesc → Default → Primary → Data*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: indivisual_product_image_desc.default.primary.data[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *IndivisualProductImageDesc → Default → Primary → Data*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: indivisual_product_image_desc.default.primary.data[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *IndivisualProductImageDesc → Default → Primary*
+ */
+export interface IndivisualProductImageDescSliceDefaultPrimary {
+  /**
+   * Data field in *IndivisualProductImageDesc → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: indivisual_product_image_desc.default.primary.data[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  data: prismic.GroupField<
+    Simplify<IndivisualProductImageDescSliceDefaultPrimaryDataItem>
+  >;
+}
+
+/**
+ * Default variation for IndivisualProductImageDesc Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IndivisualProductImageDescSliceDefault =
+  prismic.SharedSliceVariation<
+    "default",
+    Simplify<IndivisualProductImageDescSliceDefaultPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *IndivisualProductImageDesc*
+ */
+type IndivisualProductImageDescSliceVariation =
+  IndivisualProductImageDescSliceDefault;
+
+/**
+ * IndivisualProductImageDesc Shared Slice
+ *
+ * - **API ID**: `indivisual_product_image_desc`
+ * - **Description**: IndivisualProductImageDesc
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IndivisualProductImageDescSlice = prismic.SharedSlice<
+  "indivisual_product_image_desc",
+  IndivisualProductImageDescSliceVariation
+>;
 
 /**
  * Item in *LeadingCompnies → Default → Primary → compnies*
@@ -1800,6 +2027,108 @@ export type ScheduleCallSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *TableData → Default → Primary → TableData*
+ */
+export interface TableDataSliceDefaultPrimaryTabledataItem {
+  /**
+   * Heading field in *TableData → Default → Primary → TableData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * minWidth field in *TableData → Default → Primary → TableData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[].minwidth
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  minwidth: prismic.KeyTextField;
+
+  /**
+   * minHeight field in *TableData → Default → Primary → TableData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[].minheight
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  minheight: prismic.KeyTextField;
+
+  /**
+   * maxWidth field in *TableData → Default → Primary → TableData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[].maxwidth
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  maxwidth: prismic.KeyTextField;
+
+  /**
+   * maxHeight field in *TableData → Default → Primary → TableData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[].maxheight
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  maxheight: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *TableData → Default → Primary*
+ */
+export interface TableDataSliceDefaultPrimary {
+  /**
+   * TableData field in *TableData → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table_data.default.primary.tabledata[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  tabledata: prismic.GroupField<
+    Simplify<TableDataSliceDefaultPrimaryTabledataItem>
+  >;
+}
+
+/**
+ * Default variation for TableData Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableDataSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TableDataSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TableData*
+ */
+type TableDataSliceVariation = TableDataSliceDefault;
+
+/**
+ * TableData Shared Slice
+ *
+ * - **API ID**: `table_data`
+ * - **Description**: TableData
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableDataSlice = prismic.SharedSlice<
+  "table_data",
+  TableDataSliceVariation
+>;
+
+/**
  * Item in *Veriety → Default → Primary → VerityData*
  */
 export interface VeritySliceDefaultPrimaryVeritydataItem {
@@ -2298,6 +2627,10 @@ declare module "@prismicio/client" {
       AboutTeamSliceDefaultPrimary,
       AboutTeamSliceVariation,
       AboutTeamSliceDefault,
+      AdvantagesDataForIndivisualProductSlice,
+      AdvantagesDataForIndivisualProductSliceDefaultPrimary,
+      AdvantagesDataForIndivisualProductSliceVariation,
+      AdvantagesDataForIndivisualProductSliceDefault,
       BrochureSlice,
       BrochureSliceDefaultPrimaryBrochuredataItem,
       BrochureSliceDefaultPrimary,
@@ -2333,6 +2666,16 @@ declare module "@prismicio/client" {
       ImageSliceDefaultPrimary,
       ImageSliceVariation,
       ImageSliceDefault,
+      ImageGallerySlice,
+      ImageGallerySliceDefaultPrimaryImagesItem,
+      ImageGallerySliceDefaultPrimary,
+      ImageGallerySliceVariation,
+      ImageGallerySliceDefault,
+      IndivisualProductImageDescSlice,
+      IndivisualProductImageDescSliceDefaultPrimaryDataItem,
+      IndivisualProductImageDescSliceDefaultPrimary,
+      IndivisualProductImageDescSliceVariation,
+      IndivisualProductImageDescSliceDefault,
       LeadingCompniesSlice,
       LeadingCompniesSliceDefaultPrimaryCompniesItem,
       LeadingCompniesSliceDefaultPrimary,
@@ -2365,6 +2708,11 @@ declare module "@prismicio/client" {
       ScheduleCallSliceDefaultPrimary,
       ScheduleCallSliceVariation,
       ScheduleCallSliceDefault,
+      TableDataSlice,
+      TableDataSliceDefaultPrimaryTabledataItem,
+      TableDataSliceDefaultPrimary,
+      TableDataSliceVariation,
+      TableDataSliceDefault,
       VeritySlice,
       VeritySliceDefaultPrimaryVeritydataItem,
       VeritySliceDefaultPrimary,

@@ -44,12 +44,12 @@ export const WindowRangecard = ({ imageSrc, heading, description, advantages, li
         </ul>
 
         {/* Know More Link */}
-        <a
+        <Link
           href={link?.url}
           className="mt-4 text-[#c69240] font-medium hover:underline self-end"
         >
           Know More
-        </a>
+        </Link>
       </div>
     </Link>
   );

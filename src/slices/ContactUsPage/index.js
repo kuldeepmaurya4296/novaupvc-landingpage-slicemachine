@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/Pages/Aboutus/ContactForm";
+import Link from "next/link";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // Importing icons
 
 /**
@@ -54,7 +55,7 @@ const ContactUsData = ({ slice }) => {
                     Object.entries(socialLinks).map(([platform, url]) => {
                       if (!url) return null; // Skip if no URL is provided
                       return (
-                        <a
+                        <Link
                           key={platform}
                           href={url}
                           target="_blank"
@@ -70,27 +71,27 @@ const ContactUsData = ({ slice }) => {
                           {platform === "twitter" && (
                             <FaTwitter className="text-2xl" />
                           )}
-                        </a>
+                        </Link>
                       );
                     })}
                 </div>
                 <p className="text-gray-600 mb-2">
                   <span className="font-medium">Email: </span>
-                  <a
+                  <Link
                     href="mailto:novaupvc@gmail.com"
                     className="text-gray-900 hover:text-[#c69240]"
                   >
                     novaupvc@gmail.com
-                  </a>
+                  </Link>
                 </p>
                 <p className="text-gray-600 mb-2">
                   Phone:{" "}
-                  <a
+                  <Link
                     href="tel:+91 9826057359"
                     className="text-gray-900 hover:text-[#c69240]"
                   >
                     +91 9826057359
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

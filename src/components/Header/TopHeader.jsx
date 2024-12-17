@@ -28,10 +28,10 @@ export default function TopHeader({
         {/* Contact Information */}
         <div className="flex flex-row items-center justify-between gap-6 w-[60%]">
           {/* Watch Video Button */}
-          <a href={videoLink} className="flex items-center gap-2 text-[#c69240] hover:text-hover">
+          <Link href={videoLink} className="flex items-center gap-2 text-[#c69240] hover:text-hover">
             <Play className="h-5 w-5" />
             <span className="text-sm font-medium">Watch Corporate<br />Video</span>
-          </a>
+          </Link>
 
           {/* Phone Numbers */}
           <div className="flex items-start gap-2">
@@ -49,12 +49,12 @@ export default function TopHeader({
             <Mail className="h-5 w-5 text-[#c69240] mt-1" />
             <div className="text-sm">
               <p className="text-gray-600">
-                <a
+                <Link
                   href={`mailto:${email}`}
                   className="text-gray-900 hover:text-[#c69240]"
                 >
                   {email}
-                </a>
+                </Link>
               </p>
             </div>
           </div>

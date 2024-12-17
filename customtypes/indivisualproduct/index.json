@@ -17,6 +17,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "table_data": {
+              "type": "SharedSlice"
+            },
+            "indivisual_product_image_desc": {
+              "type": "SharedSlice"
+            },
+            "image_gallery": {
+              "type": "SharedSlice"
+            },
+            "advantages_data_for_indivisual_product": {
+              "type": "SharedSlice"
+            },
             "image": {
               "type": "SharedSlice"
             },

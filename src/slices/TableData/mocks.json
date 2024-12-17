@@ -1,0 +1,59 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"tabledata": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "handle",
+									"type": "Text"
+								}
+							],
+							[
+								"minwidth",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "month",
+									"type": "Text"
+								}
+							],
+							[
+								"minheight",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "snow",
+									"type": "Text"
+								}
+							],
+							[
+								"maxwidth",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "hollow",
+									"type": "Text"
+								}
+							],
+							[
+								"maxheight",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "girl",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

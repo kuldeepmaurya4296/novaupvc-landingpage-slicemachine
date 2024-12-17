@@ -23,14 +23,15 @@ const ImageDescriptionSection = ({ image, heading, description }) => {
 };
 
 const ImageDescriptionContainer = ({descriptionData}) => {
+  // console.log('descriptionData-----', descriptionData)
   return (
     <div>
       {descriptionData.map((item, index) => (
         <ImageDescriptionSection
           key={index}
-          image={item.image}
-          heading={item.heading}
-          description={item.description}
+          image={item.image?.url}
+          heading={item.title}
+          description={item.description[0]?.text || "No description available"}
         />
       ))}
     </div>
