@@ -82,7 +82,7 @@ const Navigation = ({
                 className={`fixed w-full z-50 bg-gray-800 uppercase ${isMobile ? 'py-3' : ''}`}
                 initial={{ y: 0 }}
                 animate={{
-                    y: scrollDirection === 'down' ? '-200%' : lastScrollY === 0 ? '0' : '-110%',
+                    y: scrollDirection === 'down' ? '-200%' : lastScrollY === 0 ? '0' : '-100%',
                     transition: { duration: 0.4 },
                 }}
             >
