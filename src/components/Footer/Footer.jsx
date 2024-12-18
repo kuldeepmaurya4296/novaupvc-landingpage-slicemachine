@@ -37,7 +37,7 @@ const PageFooter = ({ citiesData, linksData, socialLinks, logoSrc, contactEmail,
           <ul className="space-y-1 uppercase">
             {linksData.map((link, index) => (
               <li key={link.key}>
-                <Link href={link?.links?.text || "#"} className="text-hover text-xs md:text-[16px]">
+                <Link href={link?.links?.url || "#"} className="text-hover text-xs md:text-[16px]">
                   {link?.links?.text || "No Link"}
                 </Link>
               </li>

@@ -9,6 +9,7 @@ export const components = {
   ),
   brochure: dynamic(() => import("./Brochure")),
   cards: dynamic(() => import("./Cards")),
+  color_show_case: dynamic(() => import("./ColorShowCase")),
   contact_us_city: dynamic(() => import("./ContactUsCity")),
   contact_us_data: dynamic(() => import("./ContactUsPage")),
   footer: dynamic(() => import("./Footer")),

@@ -43,7 +43,14 @@ const routes = [
     type: "doors", // Doors repeatable type
     path: "/doors/:uid", // Dynamic path for each door item
   },
-  
+  {
+    type: "privacypolicy", // Doors repeatable type
+    path: "/privacy-policy", // Dynamic path for each door item
+  },
+  {
+    type: "termsconditions", // Contact Us singleton
+    path: "/terms-condition",
+  },
 ]
 
 /**

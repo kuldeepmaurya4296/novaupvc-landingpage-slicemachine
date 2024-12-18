@@ -28,7 +28,7 @@ export default function TopHeader({
         {/* Contact Information */}
         <div className="flex flex-row items-center justify-between gap-6 w-[60%]">
           {/* Watch Video Button */}
-          <Link href={videoLink} className="flex items-center gap-2 text-[#c69240] hover:text-hover">
+          <Link href={'/why-us#videoLink'} className="flex items-center gap-2 text-[#c69240] hover:text-hover">
             <Play className="h-5 w-5" />
             <span className="text-sm font-medium">Watch Corporate<br />Video</span>
           </Link>

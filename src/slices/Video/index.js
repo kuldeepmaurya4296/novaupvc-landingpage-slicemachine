@@ -9,7 +9,7 @@ const Video = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="px-4 md:px-10 lg:px-20 xl:px-40"
-
+      id="videoLink"
     >
       <div className={`flex justify-center items-center p-6 bg-gray-50`}>
         {/* Video Embed Container */}

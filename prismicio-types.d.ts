@@ -260,6 +260,8 @@ export type DoorsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<DoorsDocumentData>, "doors", Lang>;
 
 type HomepageDocumentDataSlicesSlice =
+  | ImageGallerySlice
+  | ColorShowCaseSlice
   | VideoSlice
   | ScheduleCallSlice
   | ProductCardSlice
@@ -411,6 +413,11 @@ export type IndivisualproductDocument<Lang extends string = string> =
   >;
 
 type PrivacypolicyDocumentDataSlicesSlice =
+  | VideoSlice
+  | MainHeadingSlice
+  | ImageSlice
+  | ImageGallerySlice
+  | BrochureSlice
   | HeroSectionSlice
   | NavbarSlice
   | FooterSlice;
@@ -475,6 +482,79 @@ export type PrivacypolicyDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
     Simplify<PrivacypolicyDocumentData>,
     "privacypolicy",
+    Lang
+  >;
+
+type TermsconditionsDocumentDataSlicesSlice =
+  | VideoSlice
+  | BrochureSlice
+  | MainHeadingSlice
+  | ImageGallerySlice
+  | ImageSlice
+  | FooterSlice
+  | HeroSectionSlice
+  | NavbarSlice;
+
+/**
+ * Content for TermsConditions documents
+ */
+interface TermsconditionsDocumentData {
+  /**
+   * Slice Zone field in *TermsConditions*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: termsconditions.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<TermsconditionsDocumentDataSlicesSlice> /**
+   * Meta Title field in *TermsConditions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: termsconditions.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *TermsConditions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: termsconditions.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *TermsConditions*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: termsconditions.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * TermsConditions document from Prismic
+ *
+ * - **API ID**: `termsconditions`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TermsconditionsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<TermsconditionsDocumentData>,
+    "termsconditions",
     Lang
   >;
 
@@ -599,6 +679,7 @@ export type AllDocumentTypes =
   | HomepageDocument
   | IndivisualproductDocument
   | PrivacypolicyDocument
+  | TermsconditionsDocument
   | WhyusDocument
   | WindowsDocument;
 
@@ -871,6 +952,88 @@ type CardsSliceVariation = CardsSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type CardsSlice = prismic.SharedSlice<"cards", CardsSliceVariation>;
+
+/**
+ * Item in *ColorShowCase → Default → Primary → Colors*
+ */
+export interface ColorShowCaseSliceDefaultPrimaryColorsItem {
+  /**
+   * ColorName field in *ColorShowCase → Default → Primary → Colors*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: color_show_case.default.primary.colors[].colorname
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  colorname: prismic.KeyTextField;
+
+  /**
+   * image field in *ColorShowCase → Default → Primary → Colors*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: color_show_case.default.primary.colors[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *ColorShowCase → Default → Primary → Colors*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: color_show_case.default.primary.colors[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *ColorShowCase → Default → Primary*
+ */
+export interface ColorShowCaseSliceDefaultPrimary {
+  /**
+   * Colors field in *ColorShowCase → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: color_show_case.default.primary.colors[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  colors: prismic.GroupField<
+    Simplify<ColorShowCaseSliceDefaultPrimaryColorsItem>
+  >;
+}
+
+/**
+ * Default variation for ColorShowCase Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ColorShowCaseSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ColorShowCaseSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ColorShowCase*
+ */
+type ColorShowCaseSliceVariation = ColorShowCaseSliceDefault;
+
+/**
+ * ColorShowCase Shared Slice
+ *
+ * - **API ID**: `color_show_case`
+ * - **Description**: ColorShowCase
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ColorShowCaseSlice = prismic.SharedSlice<
+  "color_show_case",
+  ColorShowCaseSliceVariation
+>;
 
 /**
  * Item in *ContactUsCity → Default → Primary → Locations*
@@ -1331,6 +1494,16 @@ export interface ImageGallerySliceDefaultPrimaryImagesItem {
  * Primary content in *ImageGallery → Default → Primary*
  */
 export interface ImageGallerySliceDefaultPrimary {
+  /**
+   * Heading field in *ImageGallery → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_gallery.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
   /**
    * Images field in *ImageGallery → Default → Primary*
    *
@@ -2615,6 +2788,9 @@ declare module "@prismicio/client" {
       PrivacypolicyDocument,
       PrivacypolicyDocumentData,
       PrivacypolicyDocumentDataSlicesSlice,
+      TermsconditionsDocument,
+      TermsconditionsDocumentData,
+      TermsconditionsDocumentDataSlicesSlice,
       WhyusDocument,
       WhyusDocumentData,
       WhyusDocumentDataSlicesSlice,
@@ -2641,6 +2817,11 @@ declare module "@prismicio/client" {
       CardsSliceDefaultPrimary,
       CardsSliceVariation,
       CardsSliceDefault,
+      ColorShowCaseSlice,
+      ColorShowCaseSliceDefaultPrimaryColorsItem,
+      ColorShowCaseSliceDefaultPrimary,
+      ColorShowCaseSliceVariation,
+      ColorShowCaseSliceDefault,
       ContactUsCitySlice,
       ContactUsCitySliceDefaultPrimaryLocationsItem,
       ContactUsCitySliceDefaultPrimary,

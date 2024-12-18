@@ -46,6 +46,11 @@
 						]
 					}
 				]
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "planning",
+				"type": "Text"
 			}
 		},
 		"items": []

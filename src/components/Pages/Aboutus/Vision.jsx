@@ -25,7 +25,7 @@ const data = [
 ];
 
 export const Vision = ({data}) => {
-    console.log('vision Data --- ', data)
+    // console.log('vision Data --- ', data)
    
     const [selectedIndex, setSelectedIndex] = useState(0); // Track the selected card
 
