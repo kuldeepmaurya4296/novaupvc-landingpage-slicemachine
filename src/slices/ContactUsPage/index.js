@@ -23,7 +23,7 @@ const ContactUsData = ({ slice }) => {
     >
       <div className="w-full flex lg:flex-row flex-col gap-10 lg:gap-0 justify-center py-10">
         {/* Contact Form Section */}
-        <div className="w-full lg:w-1/3 order-2 ml-3">
+        <div className="w-full lg:w-1/3 order-2">
           <ContactForm />
         </div>
 

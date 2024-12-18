@@ -6,7 +6,7 @@ import GalleryComponent from "@/components/Pages/IndivisualProject/Gallery";
  * @param {ImageGalleryProps}
  */
 const ImageGallery = ({ slice }) => {
-  console.log("galary Data ---- ", slice.primary.images)
+  // console.log("galary Data ---- ", slice.primary.images)
   return (
     <section
       data-slice-type={slice.slice_type}

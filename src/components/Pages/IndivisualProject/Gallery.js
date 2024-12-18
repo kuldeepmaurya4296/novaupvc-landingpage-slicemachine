@@ -61,7 +61,7 @@ const GalleryComponent = ({ data, heading}) => {
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
           onClick={handleModalClick}
         >
-          <div className="relative bg-white rounded-lg p-4 flex flex-col items-center w-[90%] md:w-1/2">
+          <div className="relative bg-white rounded-lg p-4 pb-8 flex flex-col items-center w-[90%] md:w-1/2">
             {/* Close Button */}
             <button
               className="absolute top-2 right-2 text-white bg-black rounded-full w-8 h-8 flex items-center justify-center"

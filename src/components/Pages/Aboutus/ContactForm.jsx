@@ -1,12 +1,13 @@
 'use client'
 import React, { useState } from 'react';
 
+
 export const ContactForm = () => {
   // State to hold the form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    mobile: '',
+    phone: '',
     message: '',
   });
 
@@ -20,18 +21,36 @@ export const ContactForm = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
+  // Handle form submission
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // Reset form fields after submission
-    setFormData({
-      name: '',
-      email: '',
-      mobile: '',
-      message: '',
+  try {
+    const response = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
     });
-  };
+
+    const result = await response.json();
+    if (response.ok) {
+      alert('Data send successfully'); // Show success message
+      // Reset form fields after submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+    } else {
+      alert('Failed to send the email. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Something went wrong. Please try again later.');
+  }
+};
+
 
   // Auto-resize textarea when typing
   const handleTextareaChange = (e) => {
@@ -78,17 +97,17 @@ export const ContactForm = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="mobile" className="block text-gray-700 font-medium mb-2">
-            Mobile
+          <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+            Mobile Number
           </label>
           <input
             type="tel"
-            id="mobile"
-            name="mobile"
-            value={formData.mobile}
+            id="phone"
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter your mobile number"
+            placeholder="Enter your phone number"
             required
           />
         </div>
