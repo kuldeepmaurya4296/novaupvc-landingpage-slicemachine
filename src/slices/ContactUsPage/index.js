@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/Pages/Aboutus/ContactForm";
+import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // Importing icons
 
@@ -32,7 +33,9 @@ const ContactUsData = ({ slice }) => {
           <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             {/* Founder Image */}
             <div className="flex justify-center">
-              <img
+              <Image
+                width={150}
+                height={150}
                 src="https://via.placeholder.com/150" // Replace with actual founder image
                 alt="Founder"
                 className="w-32 h-32 object-cover rounded-full border-4 border-gray-200 mt-6"

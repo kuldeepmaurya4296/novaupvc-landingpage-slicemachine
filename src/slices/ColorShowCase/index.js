@@ -3,6 +3,9 @@
  * @typedef {import("@prismicio/react").SliceComponentProps<ColorShowCaseSlice>} ColorShowCaseProps
  * @param {ColorShowCaseProps}
  */
+
+import { motion } from 'framer-motion';
+import { Image } from 'next/image'
 const ColorShowCase = ({ slice }) => {
   const { primary, items } = slice;
 
