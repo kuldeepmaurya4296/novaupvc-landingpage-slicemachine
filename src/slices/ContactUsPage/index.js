@@ -10,13 +10,13 @@ import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // Importin
  */
 const ContactUsData = ({ slice }) => {
   const founderData = slice?.primary?.founderdata; // Ensure founderData is defined
-
+  // console.log('founderData--------', founderData)
   if (!founderData || founderData.length === 0) {
     return <p>No founder data available.</p>;
   }
 
-  const { name, designation, experience, socialLinks } = founderData[0]; // Destructure the first founder's data
-
+  const { name, designation, experience, socialLinks, founderimage, email, phonenumber} = founderData[0]; // Destructure the first founder's data
+  // console.log('email ------------',email, phonenumber)
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -36,7 +36,7 @@ const ContactUsData = ({ slice }) => {
               <Image
                 width={150}
                 height={150}
-                src="https://via.placeholder.com/150" // Replace with actual founder image
+                src={founderimage?.url} 
                 alt="Founder"
                 className="w-32 h-32 object-cover rounded-full border-4 border-gray-200 mt-6"
               />
@@ -84,7 +84,7 @@ const ContactUsData = ({ slice }) => {
                     href="mailto:novaupvc@gmail.com"
                     className="text-gray-900 hover:text-[#c69240]"
                   >
-                    novaupvc@gmail.com
+                    {email}
                   </Link>
                 </p>
                 <p className="text-gray-600 mb-2">
@@ -93,7 +93,7 @@ const ContactUsData = ({ slice }) => {
                     href="tel:+91 9826057359"
                     className="text-gray-900 hover:text-[#c69240]"
                   >
-                    +91 9826057359
+                    {phonenumber}
                   </Link>
                 </p>
               </div>

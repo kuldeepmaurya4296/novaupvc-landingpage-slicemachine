@@ -18,6 +18,14 @@
             "label": "FounderData",
             "repeat": true,
             "fields": {
+              "founderimage": {
+                "type": "Image",
+                "config": {
+                  "label": "FounderImage",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
               "name": {
                 "type": "Text",
                 "config": {
@@ -46,6 +54,27 @@
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "email": {
+                "type": "Text",
+                "config": {
+                  "label": "Email",
+                  "placeholder": ""
+                }
+              },
+              "phonenumber": {
+                "type": "Text",
+                "config": {
+                  "label": "Phonenumber",
+                  "placeholder": ""
+                }
+              },
+              "other": {
+                "type": "Text",
+                "config": {
+                  "label": "Other",
+                  "placeholder": ""
                 }
               }
             }

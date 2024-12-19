@@ -1132,6 +1132,16 @@ export type ContactUsCitySlice = prismic.SharedSlice<
  */
 export interface ContactUsDataSliceDefaultPrimaryFounderdataItem {
   /**
+   * FounderImage field in *ContactUsPage → Default → Primary → FounderData*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_us_data.default.primary.founderdata[].founderimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  founderimage: prismic.ImageField<never>;
+
+  /**
    * Name field in *ContactUsPage → Default → Primary → FounderData*
    *
    * - **Field Type**: Text
@@ -1170,6 +1180,36 @@ export interface ContactUsDataSliceDefaultPrimaryFounderdataItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   sociallinks: prismic.RichTextField;
+
+  /**
+   * Email field in *ContactUsPage → Default → Primary → FounderData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_us_data.default.primary.founderdata[].email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phonenumber field in *ContactUsPage → Default → Primary → FounderData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_us_data.default.primary.founderdata[].phonenumber
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phonenumber: prismic.KeyTextField;
+
+  /**
+   * Other field in *ContactUsPage → Default → Primary → FounderData*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_us_data.default.primary.founderdata[].other
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  other: prismic.KeyTextField;
 }
 
 /**
